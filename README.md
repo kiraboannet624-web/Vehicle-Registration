@@ -1,18 +1,55 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
+# Vehicle Registration & Management Platform
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+A production-grade frontend dashboard for registering and managing vehicles, built with React + Vite.
 
-## React Compiler
+## Features
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+- Public vehicle list (no login required)
+- Client-side authentication with protected routes
+- 3-step vehicle registration wizard with full Zod validation
+- Tabbed vehicle detail view (Info, Owner, Registration, Insurance)
+- Edit and delete vehicles with confirmation modal
+- Toast notifications for all actions
+- TanStack Query caching per data segment
 
-Note: This will impact Vite dev & build performances.
+## Tech Stack
 
-## Expanding the ESLint configuration
+- React 19, Vite
+- React Router v7
+- TanStack Query v5 (data fetching & caching)
+- Axios (HTTP client)
+- Zod (validation)
+- React Hot Toast (notifications)
+- Tailwind CSS / Custom CSS
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Getting Started
+
+bash
+npm install
+npm run dev
+
+
+Open [http://localhost:5173](http://localhost:5173)
+
+## Login Credentials
+Email:    test@gmail.com
+Password: Password!234
+
+## API Base URL
+
+Configured via .env:
+
+VITE_API_BASE_URL=https://student-management-system-backend.up.railway.app
+
+## Routes
+
+| Path | Access | Description |
+
+  | Public | Vehicle list table |
+ login | Public | Sign in page |
+ dashboard | Protected | Stats + manage vehicles |
+ vehicle/new | Protected | 3-step registration form |
+ vehicle | Protected | Tabbed vehicle details |
+ vehicle | Protected | Edit vehicle form |
